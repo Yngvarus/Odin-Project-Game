@@ -1,103 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.body{
+.body {
     font-family: 'Roboto Slab', serif;
     justify-content: center;
     align-content: center;
 }
 
-.game-container{
+.game-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    margin: 50px;
-    border: 5px solid;
-    border-width: 3px;
-    border-radius: 5px;
+    margin: 1em;
+    border: 0.1em solid;
+    border-radius: 0.5em;
     border-color: chartreuse;
 }
 
-.top-container{
+.top-container {
     display: flex;
-    height: 75%;
+    height: 60%;
     flex-direction: row;
     align-items: center;
-    margin: 20px;
-    padding: 5px;
+    margin: 0.5em;
+    padding: 0.2em;
 }
 
-.bottom-container{
+.bottom-container {
     display: flex;
-    height: 25%;
+    height: 40%;
     justify-content: center;
     align-content: center;
     flex-direction: row;
-    margin: 20px;
-    padding: 5px;
+    margin: 0.5em;
+    padding: 0.2em;
 }
 
-.dx-container, .sx-container{
+.dx-container, .sx-container {
     display: flex;
     width: 30%;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
 }
 
-.ctr-container{
+.ctr-container {
     display: flex;
     width: 40%;
     align-items: center;
-    justify-content: center; 
-    margin: 20px;
+    justify-content: center;
+    margin: 0.5em;
 }
 
-.pl-points, .btn-container, .pc-points{
+.pl-points, .btn-container, .pc-points {
     display: flex;
     width: 33%;
     align-items: center;
     justify-content: center;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     flex-direction: column;
 }
 
-.btn-grid{
+.btn-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 1px;
+    grid-template-columns: repeat(3, 0.1fr);
+    gap: 0.1em;
 }
 
-.btn-grid button{
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
+.btn-grid button {
+    width: 3em;
+    height: 3em;
+    margin: 1em;
+    border-style: none;
+    border-radius: 50%;
+    padding: 6%;
     cursor: pointer;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.pc-point-circle-grid, .pl-point-circle-grid{
+.rock {
+    background-image: url("../images/rock.png");
+}
+
+.scissors {
+    background-image: url("../images/scissors.png");
+}
+
+.paper {
+    background-image: url("../images/paper.png");
+}
+
+.pc-point-circle-grid, .pl-point-circle-grid {
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
+    grid-template-columns: repeat(3, 0.1fr);
+    gap: 0.05em;
 }
 
-.pc-point-circle-grid .circle, .pl-point-circle-grid .circle{
-    width: 100px;
-    height: 100px;
+.pc-point-circle-grid .circle, .pl-point-circle-grid .circle {
+    width: 2.5em;
+    height: 2.5em;
     border-style: dotted double;
     border-radius: 50%;
     background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 0.5em;
     cursor: pointer;
+}
+
+.choice-square{
+    width: 6em;
+    height: 6em;
+    margin: 1em;
+    padding: 0.5em;
+    border: 0.1em solid;
+    border-radius: 0.5em;
+    border-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
