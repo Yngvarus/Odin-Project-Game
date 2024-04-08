@@ -9,6 +9,11 @@
     font-family: 'Roboto Slab', serif;
     justify-content: center;
     align-content: center;
+    background-color: #b0d1ae;
+}
+
+.main-container{
+    background-color: #b0d1ae;
 }
 
 .game-container {
@@ -20,6 +25,7 @@
     border: 0.1em solid;
     border-radius: 0.5em;
     border-color: chartreuse;
+    background-color: #a1c89e;
 }
 
 .top-container {
@@ -62,6 +68,7 @@
     width: 33%;
     align-items: center;
     justify-content: center;
+    font-size: 3em;
 }
 
 .btn-container {
@@ -71,13 +78,13 @@
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(3, 0.1fr);
+    grid-template-columns: repeat(5, 0.1fr);
     gap: 0.1em;
 }
 
 .btn-grid button {
-    width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
     margin: 1em;
     border-style: none;
     border-radius: 50%;
@@ -86,6 +93,12 @@
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #416d3e;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.btn-grid button:hover {
+    background-color: #345832; 
 }
 
 .rock {
@@ -100,6 +113,14 @@
     background-image: url("../images/paper.png");
 }
 
+.lizard {
+    background-image: url("../images/lizard.png");
+}
+
+.spock {
+    background-image: url("../images/spock.png");
+}
+
 .pc-point-circle-grid, .pl-point-circle-grid {
     display: grid;
     grid-template-columns: repeat(3, 0.1fr);
@@ -109,7 +130,7 @@
 .pc-point-circle-grid .circle, .pl-point-circle-grid .circle {
     width: 2.5em;
     height: 2.5em;
-    border-style: dotted double;
+    border-style: double;
     border-radius: 50%;
     background-color: lightgray;
     display: flex;
@@ -117,6 +138,7 @@
     align-items: center;
     font-size: 0.5em;
     cursor: pointer;
+    background-color: #78b075;
 }
 
 .choice-square{
@@ -130,4 +152,142 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #88b984;
+}
+
+.msg-box {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.msg-box-content {
+    background-color: #9cc599;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20em;
+    height: 15em;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result-message{
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9999; 
+}
+  
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #9cc599;
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+.overlay-content h2 {
+    margin-bottom: 10px;
+}
+  
+.overlay-content input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+  
+.overlay-content button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.overlay-content button:hover {
+    background-color: #45a049;
+}  
+
+.rules-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b0d1ae;
+}
+
+.rules {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 1em;
+    border: 0.1em solid;
+    border-radius: 0.5em;
+    border-color: chartreuse;
+    background-color: #a1c89e;
+}
+
+.rules h1 {
+    font-weight: bold;
+    color: #121f11;
+    text-align: center;
+}
+
+.rules ol {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rules li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #121f11;
 }

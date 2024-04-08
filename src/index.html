@@ -4,51 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='style.css'/>
-    <script src='script.js'></script>
+
     <title>Rock-Paper-Scissor</title>
 </head>
 <body>
-    <div class="game-container">
-        <div class="top-container">
-            <div class="dx-container">
-                <h1>Il tuo nome</h1>
-                <div class="PL-Choice">
-                    <div class="choice-square" id="player-choice"></div>
-                </div>
-            </div>
-            <div class="ctr-container">
-                <h1> VS. </h1>
-            </div>
-            <div class="sx-container">
-                <h1>Il Computer</h1>
-                <div class="PC-Choice">
-                    <div class="choice-square" id="computer-choice"></div>
-                </div>
-            </div>
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+          <h2>Inserisci il tuo nome</h2>
+          <form id="name-form">
+            <input type="text" id="player-name" placeholder="Il tuo nome">
+            <button type="submit">Invia</button>
+          </form>
         </div>
-        <div class="bottom-container">
-            <div class="pl-points">
-                <div class="pl-point-circle-grid">
-                    <div class="circle">X</div>
-                    <div class="circle">O</div>
-                    <div class="circle">-</div>
+    </div>      
+    
+    <div class="main-container">
+        <div class="game-container">
+            <div class="top-container">
+                <div class="dx-container">
+                    <h1 id="player-title">Il tuo nome</h1>
+                    <div class="PL-Choice">
+                        <div class="choice-square" id="player-choice"></div>
+                    </div>
+                </div>
+                <div class="ctr-container">
+                    <h1> VS. </h1>
+                </div>
+                <div class="sx-container">
+                    <h1>Il Computer</h1>
+                    <div class="PC-Choice">
+                        <div class="choice-square" id="computer-choice"></div>
+                    </div>
                 </div>
             </div>
-            <div class="btn-container"> 
-                <div class="btn-grid">
-                    <button class="rock" type="button" aria-label="Rock"></button>
-                    <button class="scissors" type="button" aria-label="Scissors"></button>
-                    <button class="paper" type="button" aria-label="Paper"></button>                  
+            <div class="bottom-container">
+                <div class="pl-points">
+                    <div class="pl-point-circle-grid" id="pl-point-circle-grid">
+                        <div class="circle" id="pl-circle1"></div>
+                        <div class="circle" id="pl-circle2"></div>
+                        <div class="circle" id="pl-circle3"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="pc-points">
-                <div class="pc-point-circle-grid">
-                    <div class="circle">X</div>
-                    <div class="circle">O</div>
-                    <div class="circle">-</div>
+                <div class="btn-container"> 
+                    <div class="btn-grid">
+                        <button class="spock" type="button" aria-label="Paper" onclick="clickBtn('spock')"></button>  
+                        <button class="rock" type="button" aria-label="Rock" onclick="clickBtn('rock')"></button>
+                        <button class="scissors" type="button" aria-label="Scissors" onclick="clickBtn('scissors')"></button>
+                        <button class="paper" type="button" aria-label="Paper" onclick="clickBtn('paper')"></button>
+                        <button class="lizard" type="button" aria-label="Paper" onclick="clickBtn('lizard')"></button>
+                    </div>
+                </div>
+                <div class="pc-points">
+                    <div class="pc-point-circle-grid" id="pc-point-circle-grid">
+                        <div class="circle" id="pc-circle1"></div>
+                        <div class="circle" id="pc-circle2"></div>
+                        <div class="circle" id="pc-circle3"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="msg-box" class="msg-box">
+            <div class="msg-box-content">
+              <span class="close">&times;</span>
+              <p id="result-message"></p>
+            </div>
+        </div>
+        
+        <div class="rules-container"> 
+            <div class="rules">
+                <h1>Regole del Gioco</h1>
+                <ol>
+                    <li>Le forbici tagliano la carta.</li>
+                    <li>La carta avvolge il sasso.</li>
+                    <li>Il sasso schiaccia il lucertola.</li>
+                    <li>Il lucertola avvelena Spock.</li>
+                    <li>Spock rompe le forbici.</li>
+                    <li>Le forbici decapitano il lucertola.</li>
+                    <li>Il lucertola mangia la carta.</li>
+                    <li>La carta invalida Spock.</li>
+                    <li>Spock vaporizza il sasso.</li>
+                    <li>E, come sempre, il sasso rompe le forbici.</li>
+                </ol>
+            </div>
+        </div>
+        
+    <script src='script.js'></script>
 </body>
 </html>
