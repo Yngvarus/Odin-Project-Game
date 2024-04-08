@@ -9,11 +9,11 @@
     font-family: 'Roboto Slab', serif;
     justify-content: center;
     align-content: center;
-    background-color: #b0d1ae;
+    background-color: #e4d6a7;
 }
 
-.main-container{
-    background-color: #b0d1ae;
+.main-container {
+    background-color: #e4d6a7;
 }
 
 .game-container {
@@ -24,8 +24,8 @@
     margin: 1em;
     border: 0.1em solid;
     border-radius: 0.5em;
-    border-color: chartreuse;
-    background-color: #a1c89e;
+    border-color: #e7c57a;
+    background-color: #e9b44c;
 }
 
 .top-container {
@@ -47,7 +47,8 @@
     padding: 0.2em;
 }
 
-.dx-container, .sx-container {
+.dx-container,
+.sx-container {
     display: flex;
     width: 30%;
     align-items: center;
@@ -63,7 +64,9 @@
     margin: 0.5em;
 }
 
-.pl-points, .btn-container, .pc-points {
+.pl-points,
+.btn-container,
+.pc-points {
     display: flex;
     width: 33%;
     align-items: center;
@@ -93,12 +96,12 @@
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #416d3e;
+    background-color: #694026;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .btn-grid button:hover {
-    background-color: #345832; 
+    background-color: #807459;
 }
 
 .rock {
@@ -121,13 +124,15 @@
     background-image: url("../images/spock.png");
 }
 
-.pc-point-circle-grid, .pl-point-circle-grid {
+.pc-point-circle-grid,
+.pl-point-circle-grid {
     display: grid;
     grid-template-columns: repeat(3, 0.1fr);
     gap: 0.05em;
 }
 
-.pc-point-circle-grid .circle, .pl-point-circle-grid .circle {
+.pc-point-circle-grid .circle,
+.pl-point-circle-grid .circle {
     width: 2.5em;
     height: 2.5em;
     border-style: double;
@@ -138,21 +143,21 @@
     align-items: center;
     font-size: 0.5em;
     cursor: pointer;
-    background-color: #78b075;
+    background-color: #76665e;
 }
 
-.choice-square{
+.choice-square {
     width: 6em;
     height: 6em;
     margin: 1em;
     padding: 0.5em;
     border: 0.1em solid;
-    border-radius: 0.5em;
-    border-color: chartreuse;
+    border-radius: 0.75em;
+    border-color: #9b2915;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #88b984;
+    background-color: #c26f31;
 }
 
 .msg-box {
@@ -168,7 +173,7 @@
 }
 
 .msg-box-content {
-    background-color: #9cc599;
+    background-color: #e4d6a7;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -183,7 +188,7 @@
     justify-content: center;
 }
 
-#result-message{
+#result-message {
     text-align: center;
     height: 50%;
     width: 50%;
@@ -214,48 +219,48 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 9999; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
 }
-  
+
 .overlay-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #9cc599;
+    background-color: #e4d6a7;
     padding: 20px;
     border-radius: 10px;
 }
-  
+
 .overlay-content h2 {
     margin-bottom: 10px;
 }
-  
+
 .overlay-content input {
     width: 50%;
     padding: 10px;
     margin-bottom: 10px;
 }
-  
+
 .overlay-content button {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #58a6ab;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-  
-.overlay-content button:hover {
-    background-color: #45a049;
-}  
 
-.rules-container{
+.overlay-content button:hover {
+    background-color: #60aaaf;
+}
+
+.rules-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #b0d1ae;
+    background-color: #e4d6a7;
 }
 
 .rules {
@@ -267,13 +272,13 @@
     margin: 1em;
     border: 0.1em solid;
     border-radius: 0.5em;
-    border-color: chartreuse;
-    background-color: #a1c89e;
+    border-color: #e7c57a;
+    background-color: #e9b44c;
 }
 
 .rules h1 {
     font-weight: bold;
-    color: #121f11;
+    color: #1c110a;
     text-align: center;
 }
 
@@ -289,5 +294,5 @@
     margin-bottom: 10px;
     font-size: 18px;
     line-height: 1.5;
-    color: #121f11;
+    color: #1c110a;
 }
